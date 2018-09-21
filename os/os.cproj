@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>{cbac27c5-e522-4f30-8dd6-66aea9e718ed}</ProjectGuid>
+    <avrdevice>AT90USB1287</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>os</AssemblyName>
+    <Name>os</Name>
+    <RootNamespace>os</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.21.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <JtagDbgClock>200000</JtagDbgClock>
+          <JtagEnableExtResetOnStartSession>true</JtagEnableExtResetOnStartSession>
+          <JtagInChain>false</JtagInChain>
+          <JtagDevicesBefore>0</JtagDevicesBefore>
+          <JtagDevicesAfter>0</JtagDevicesAfter>
+          <JtagInstrBitsBefore>0</JtagInstrBitsBefore>
+          <JtagInstrBitsAfter>0</JtagInstrBitsAfter>
+          <JtagSelectedDeviceIndexInChain>
+          </JtagSelectedDeviceIndexInChain>
+          <JtagDaisyChainDevices>
+          </JtagDaisyChainDevices>
+        </InterfaceProperties>
+        <InterfaceName>JTAG</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J41800001443</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+    <avrtoolinterface>JTAG</avrtoolinterface>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.compiler.warnings.ExtraWarnings>True</avrgcc.compiler.warnings.ExtraWarnings>
+        <avrgcc.compiler.warnings.Undefined>True</avrgcc.compiler.warnings.Undefined>
+        <avrgcc.compiler.miscellaneous.OtherFlags>-std=gnu11</avrgcc.compiler.miscellaneous.OtherFlags>
+        <avrgcc.linker.general.GenerateMAPFile>False</avrgcc.linker.general.GenerateMAPFile>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.linker.miscellaneous.LinkerFlags>-Wl,-u,vfprintf -lprintf_flt</avrgcc.linker.miscellaneous.LinkerFlags>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="led.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="led.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\core\internal\init.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\core\internal\move_sp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\core\internal\osthread.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\core\internal\osthread.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\core\internal\sched.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\core\internal\sched.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\core\interrupt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\core\interrupt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\core\time_private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\examples\messages.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\examples\periodic.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\memory\malloc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\memory\malloc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\memory\malloc_private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\os.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\os_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\structure\cdlist.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\structure\cdlist.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\core\message.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\core\message.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\core\resource.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\core\resource.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\core\thread.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\core\thread.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\core\time.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\core\time.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\examples.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\examples\resource.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\peripheral\adc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\peripheral\adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\peripheral\port\at90usb1287\adc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\peripheral\port\at90usb1287\adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\peripheral\port\at90usb1287\uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\peripheral\port\at90usb1287\uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\peripheral\port\port.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\peripheral\uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\peripheral\uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\structure\enclosing.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\tests\ownerThread.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\tests\terminateThread.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\util\assert.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\util\atom.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\util\cpp_magic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\util\typeid.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\util\random.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\util\random.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="switch.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="switch.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="test.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="os" />
+    <Folder Include="os\core\" />
+    <Folder Include="os\core\internal\" />
+    <Folder Include="os\examples\" />
+    <Folder Include="os\memory\" />
+    <Folder Include="os\structure" />
+    <Folder Include="os\peripheral\" />
+    <Folder Include="os\peripheral\port\" />
+    <Folder Include="os\peripheral\port\at90usb1287\" />
+    <Folder Include="os\tests\" />
+    <Folder Include="os\util" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
